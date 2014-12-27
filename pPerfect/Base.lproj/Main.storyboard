@@ -8,7 +8,7 @@
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="pPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="pPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -149,9 +149,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="pM1-zw-kvk" secondAttribute="centerY" constant="-168" id="83h-9R-YqB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2D9-F7-gWz" secondAttribute="trailing" constant="44" id="CNV-r7-FPC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2D9-F7-gWz" secondAttribute="trailing" constant="35" id="CNV-r7-FPC"/>
                             <constraint firstItem="2D9-F7-gWz" firstAttribute="top" secondItem="qXW-fo-vvz" secondAttribute="bottom" constant="43" id="JDt-Rm-abZ"/>
-                            <constraint firstItem="TE2-29-3D1" firstAttribute="leading" secondItem="0uj-IS-PYy" secondAttribute="leadingMargin" constant="32" id="anh-sB-DEc"/>
+                            <constraint firstItem="TE2-29-3D1" firstAttribute="leading" secondItem="0uj-IS-PYy" secondAttribute="leadingMargin" constant="35" id="anh-sB-DEc"/>
                             <constraint firstAttribute="centerX" secondItem="pM1-zw-kvk" secondAttribute="centerX" constant="7" id="oWO-sH-Jqz"/>
                             <constraint firstItem="TE2-29-3D1" firstAttribute="top" secondItem="qXW-fo-vvz" secondAttribute="bottom" constant="43" id="xBD-SX-fwz"/>
                         </constraints>

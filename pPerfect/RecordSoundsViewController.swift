@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecordSoundsViewController.swift
 //  pPerfect
 //
 //  Created by Mukiza Andrew on 12/27/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RecordSoundsViewController: UIViewController {
 
     @IBOutlet weak var recordinLabel: UILabel!
     @IBOutlet weak var stopBtn: UIButton!
