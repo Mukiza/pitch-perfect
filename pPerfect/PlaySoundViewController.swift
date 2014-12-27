@@ -12,16 +12,18 @@ import AVFoundation
 class PlaySoundViewController: UIViewController {
     
     var audioPlayer : AVAudioPlayer!
+    var recievedAudio : RecordedAudio!
+    var audioEngine : AVAudioEngine!
+    var audioFile : AVAudioFile!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if var filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
-        var filePathUrl = NSURL.fileURLWithPath(filePath)
-        audioPlayer = AVAudioPlayer(contentsOfURL: filePathUrl, error: nil)
-        }else{
-            println("Oops the file path didn't get us stuff")
-        }
-        // Do any additional setup after loading the view.
+        
+        audioPlayer = AVAudioPlayer(contentsOfURL: recievedAudio.filePathUrl, error: nil)
+        audioPlayer.enableRate = true
+        
+        audioEngine = AVAudioEngine()
+        audioFile = AVAudioFile(forReading: recievedAudio.filePathUrl, error: nil)
     }
 
     @IBAction func PlaySoundFast(sender: UIButton) {
@@ -30,7 +32,10 @@ class PlaySoundViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func PlayWithChimpmunkEffect(sender: UIButton) {
+        playAudioWith(1000)
     }
     
     @IBAction func PlaySlowly(sender: UIButton) {
@@ -41,22 +46,38 @@ class PlaySoundViewController: UIViewController {
         audioPlayer.stop()
     }
 
+    @IBAction func PlayWithDarthVarderEffect(sender: UIButton) {
+        playAudioWith(-1000)
+    }
+    
     func playSoundAt(rate: Float){
         audioPlayer.stop()
-        audioPlayer.enableRate = true
         audioPlayer.currentTime = 0.0
         audioPlayer.rate = rate
         audioPlayer.play()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func playAudioWith(pitch: Float){
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        var audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        
+        var audioPitchEffect = AVAudioUnitTimePitch()
+        audioPitchEffect.pitch = pitch
+        audioEngine.attachNode(audioPitchEffect)
+        
+        audioEngine.connect(audioPlayerNode, to: audioPitchEffect, format: nil)
+        audioEngine.connect(audioPitchEffect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        
+        audioEngine.startAndReturnError(nil)
+        
+        audioPlayerNode.play()
     }
-    */
 
 }

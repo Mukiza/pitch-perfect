@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		660B42111A4EB2E10034C32B /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660B42101A4EB2E10034C32B /* RecordedAudio.swift */; };
 		66E3177D1A4E8D950048635E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E3177C1A4E8D950048635E /* AppDelegate.swift */; };
 		66E3177F1A4E8D950048635E /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E3177E1A4E8D950048635E /* RecordSoundsViewController.swift */; };
 		66E317821A4E8D950048635E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E317801A4E8D950048635E /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		660B42101A4EB2E10034C32B /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 		66E317771A4E8D950048635E /* pPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E3177B1A4E8D950048635E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66E3177C1A4E8D950048635E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				66E3177E1A4E8D950048635E /* RecordSoundsViewController.swift */,
 				66E3179C1A4E9A220048635E /* PlaySoundViewController.swift */,
 				66E317801A4E8D950048635E /* Main.storyboard */,
+				660B42101A4EB2E10034C32B /* RecordedAudio.swift */,
 				66E317831A4E8D950048635E /* Images.xcassets */,
 				66E317851A4E8D950048635E /* LaunchScreen.xib */,
 				66E3177A1A4E8D950048635E /* Supporting Files */,
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				660B42111A4EB2E10034C32B /* RecordedAudio.swift in Sources */,
 				66E3177F1A4E8D950048635E /* RecordSoundsViewController.swift in Sources */,
 				66E3179D1A4E9A220048635E /* PlaySoundViewController.swift in Sources */,
 				66E3177D1A4E8D950048635E /* AppDelegate.swift in Sources */,
@@ -413,6 +417,7 @@
 				66E317981A4E8D950048635E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66E317991A4E8D950048635E /* Build configuration list for PBXNativeTarget "pPerfectTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				66E3179B1A4E8D950048635E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
