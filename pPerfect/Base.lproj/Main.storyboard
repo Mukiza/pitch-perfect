@@ -138,9 +138,6 @@
                                 <state key="normal" backgroundImage="chipmunk">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="51" y="284" width="100" height="90"/>
-                                </variation>
                                 <connections>
                                     <action selector="PlayWithChimpmunkEffect:" destination="r48-Rv-wfG" eventType="touchUpInside" id="iRQ-oq-HIu"/>
                                 </connections>
@@ -150,9 +147,6 @@
                                 <state key="normal" backgroundImage="darthvarder">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="249" y="284" width="100" height="90"/>
-                                </variation>
                                 <connections>
                                     <action selector="PlayWithDarthVarderEffect:" destination="r48-Rv-wfG" eventType="touchUpInside" id="3IG-CC-GiA"/>
                                 </connections>
@@ -180,12 +174,12 @@
                                 <exclude reference="Y6P-sq-fbb"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="anh-sB-DEc"/>
-                                <exclude reference="xBD-SX-fwz"/>
                                 <exclude reference="CNV-r7-FPC"/>
                                 <exclude reference="JDt-Rm-abZ"/>
                                 <exclude reference="lFr-Fg-lEm"/>
                                 <exclude reference="txa-Vw-qjX"/>
+                                <exclude reference="anh-sB-DEc"/>
+                                <exclude reference="xBD-SX-fwz"/>
                                 <exclude reference="qIv-K7-fXK"/>
                                 <exclude reference="yGm-ua-KQ1"/>
                                 <exclude reference="83h-9R-YqB"/>
@@ -201,12 +195,12 @@
                                 <include reference="Y6P-sq-fbb"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="anh-sB-DEc"/>
-                                <include reference="xBD-SX-fwz"/>
                                 <include reference="CNV-r7-FPC"/>
                                 <include reference="JDt-Rm-abZ"/>
                                 <include reference="lFr-Fg-lEm"/>
                                 <include reference="txa-Vw-qjX"/>
+                                <include reference="anh-sB-DEc"/>
+                                <include reference="xBD-SX-fwz"/>
                                 <include reference="qIv-K7-fXK"/>
                                 <include reference="yGm-ua-KQ1"/>
                                 <include reference="83h-9R-YqB"/>
